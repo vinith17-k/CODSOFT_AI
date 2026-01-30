@@ -22,6 +22,7 @@ export const GameCell = ({ value, onClick, disabled, isWinning }: GameCellProps)
         isWinning && "winning-cell"
       )}
       aria-label={value ? `Cell contains ${value}` : "Empty cell"}
+      data-testid="game-cell"
     >
       {value && (
         <span

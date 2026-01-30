@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Captioning Tool</title>
+    <link rel="stylesheet" href="src/style.css">
+    <!-- Using Google Fonts for Outfit to match other tasks -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo-box">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <span class="app-title">AI Image Captioning</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <h1>Turn images into <span class="gradient-text">meaningful descriptions</span></h1>
+                <p>Upload any image and let AI generate accurate, descriptive captions in seconds.</p>
+            </div>
+
+            <!-- Upload Zone -->
+            <div id="upload-container" class="upload-container">
+                <!-- Drop Zone State -->
+                <div id="drop-zone" class="drop-zone">
+                    <input type="file" id="file-input" accept="image/*" class="file-input" hidden>
+                    <div class="icon-wrapper">
+                        <i class="fa-regular fa-image"></i>
+                    </div>
+                    <p class="drop-text">Drag & drop your image here</p>
+                    <p class="support-text">Supports JPG, PNG, WebP</p>
+                    <button id="browse-btn" class="btn btn-secondary">
+                        <i class="fa-solid fa-upload"></i> Browse Image
+                    </button>
+                </div>
+
+                <!-- Preview State (Hidden by default) -->
+                <div id="preview-area" class="preview-area hidden">
+                    <div class="image-wrapper">
+                        <img id="image-preview" src="" alt="Preview">
+                        <button id="clear-btn" class="clear-btn" aria-label="Remove image">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div id="action-area" class="action-area hidden">
+                <button id="generate-btn" class="btn btn-primary btn-xl">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Caption
+                </button>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loading-area" class="result-card hidden">
+                <div class="loading-content">
+                    <div class="icon-pulse">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <span>AI is analyzing the image...</span>
+                </div>
+                <div class="skeleton-lines">
+                    <div class="line line-1"></div>
+                    <div class="line line-2"></div>
+                    <div class="line line-3"></div>
+                </div>
+            </div>
+
+            <!-- Result Section -->
+            <div id="result-area" class="result-card hidden">
+                <div class="result-header">
+                    <div class="result-title">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <span>Generated Caption</span>
+                    </div>
+                    <button id="copy-btn" class="copy-btn">
+                        <i class="fa-regular fa-copy"></i> Copy
+                    </button>
+                </div>
+                <div class="result-body">
+                    <p id="caption-text" class="caption-text"></p>
+                </div>
+            </div>
+
+            <!-- Post-Result Actions -->
+            <div id="regenerate-area" class="action-row hidden">
+                <button id="new-image-btn" class="btn btn-outline">Upload New Image</button>
+                <button id="regenerate-btn" class="btn btn-secondary">
+                    <i class="fa-solid fa-rotate-right"></i> Regenerate
+                </button>
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>Powered by AI • Built for CodSoft</p>
+        </footer>
+    </div>
+
+    <script src="src/script.js"></script>
+</body>
+
+</html>

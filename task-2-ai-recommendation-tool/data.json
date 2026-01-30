@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "title": "Introduction to Python",
+        "description": "A comprehensive guide to Python programming for beginners.",
+        "category": "tech",
+        "level": "beginner",
+        "goal": "learning"
+    },
+    {
+        "id": 2,
+        "title": "Advanced React Patterns",
+        "description": "Deep dive into advanced React concepts and patterns.",
+        "category": "tech",
+        "level": "advanced",
+        "goal": "career"
+    },
+    {
+        "id": 3,
+        "title": "Personal Finance 101",
+        "description": "Learn how to manage your money, budget, and invest.",
+        "category": "finance",
+        "level": "beginner",
+        "goal": "learning"
+    },
+    {
+        "id": 4,
+        "title": "Investment Strategies for 2024",
+        "description": "Expert strategies for maximizing your investment portfolio.",
+        "category": "finance",
+        "level": "intermediate",
+        "goal": "productivity"
+    },
+    {
+        "id": 5,
+        "title": "Yoga for Beginners",
+        "description": "Basic yoga poses to improve flexibility and reduce stress.",
+        "category": "health",
+        "level": "beginner",
+        "goal": "health"
+    },
+    {
+        "id": 6,
+        "title": "High-Intensity Interval Training",
+        "description": "Quick and effective workouts to burn fat and build muscle.",
+        "category": "health",
+        "level": "intermediate",
+        "goal": "productivity"
+    },
+    {
+        "id": 7,
+        "title": "Full Stack Web Development",
+        "description": "Master both frontend and backend development.",
+        "category": "tech",
+        "level": "intermediate",
+        "goal": "career"
+    },
+    {
+        "id": 8,
+        "title": "Machine Learning Basics",
+        "description": "Understand the fundamentals of machine learning.",
+        "category": "tech",
+        "level": "beginner",
+        "goal": "learning"
+    },
+    {
+        "id": 9,
+        "title": "Productivity Hacks",
+        "description": "Tips and tricks to get more done in less time.",
+        "category": "education",
+        "level": "beginner",
+        "goal": "productivity"
+    },
+    {
+        "id": 10,
+        "title": "Effective Leadership",
+        "description": "Skills and strategies to become a better leader.",
+        "category": "education",
+        "level": "advanced",
+        "goal": "career"
+    },
+    {
+        "id": 11,
+        "title": "Healthy Meal Prep",
+        "description": "Save time and eat healthier with meal prepping.",
+        "category": "health",
+        "level": "beginner",
+        "goal": "health"
+    },
+    {
+        "id": 12,
+        "title": "Crypto Trading for Beginners",
+        "description": "Understanding the basics of cryptocurrency trading.",
+        "category": "finance",
+        "level": "beginner",
+        "goal": "learning"
+    }
+]

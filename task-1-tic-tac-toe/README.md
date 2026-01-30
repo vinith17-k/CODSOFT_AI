@@ -1,73 +1,82 @@
-# Welcome to your Lovable project
+# Task 1: Tic-Tac-Toe Game with AI
 
-## Project info
+An interactive Tic-Tac-Toe game featuring an intelligent AI opponent powered by the Minimax algorithm. Challenge yourself against different difficulty levels in a modern, responsive interface.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🎮 Features
 
-## How can I edit this code?
+- **Intelligent AI Opponent**: Powered by the Minimax algorithm for optimal gameplay
+- **Multiple Difficulty Levels**: Choose from Easy, Medium, and Hard modes
+- **Score Tracking**: Keep track of wins, losses, and draws
+- **Modern UI**: Clean, responsive design with smooth animations
+- **Real-time Updates**: Instant game state feedback
+- **Two-Player Mode**: Play against a friend locally
 
-There are several ways of editing your application.
+## 🛠 Tech Stack
 
-**Use Lovable**
+- **Frontend Framework**: React 18
+- **Language**: TypeScript
+- **Build Tool**: Vite
+- **Styling**: TailwindCSS
+- **UI Components**: shadcn/ui
+- **State Management**: React Hooks
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🏗 Project Structure
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+task-1-tic-tac-toe/
+├── src/
+│   ├── components/     # React components
+│   ├── hooks/          # Custom React hooks
+│   ├── utils/          # AI logic and utilities
+│   └── App.tsx         # Main application
+├── public/             # Static assets
+├── index.html          # Entry HTML file
+└── package.json        # Dependencies
 ```
 
-**Edit a file directly in GitHub**
+## 🚀 How to Run
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-**Use GitHub Codespaces**
+2. **Start development server**:
+   ```bash
+   npm run dev
+   ```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+3. **Open in browser**:
+   - Navigate to `http://localhost:5173` (or the port shown in terminal)
 
-## What technologies are used for this project?
+4. **Build for production** (optional):
+   ```bash
+   npm run build
+   ```
 
-This project is built with:
+## 🎯 How to Play
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. Select your difficulty level (Easy, Medium, or Hard)
+2. Choose to play as X or O
+3. Click on any empty cell to make your move
+4. The AI will automatically respond
+5. Try to get three in a row to win!
 
-## How can I deploy this project?
+## 🧠 AI Implementation
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+The AI uses the **Minimax algorithm** with alpha-beta pruning for optimal decision-making:
+- **Easy Mode**: Random moves with occasional smart plays
+- **Medium Mode**: Mix of random and optimal moves
+- **Hard Mode**: Always plays optimally using full Minimax
 
-## Can I connect a custom domain to my Lovable project?
+## 📝 Key Features Implementation
 
-Yes, you can!
+- **Minimax Algorithm**: Evaluates all possible game states to find the best move
+- **Alpha-Beta Pruning**: Optimizes the search by eliminating unnecessary branches
+- **Responsive Design**: Works seamlessly on desktop and mobile devices
+- **State Management**: Efficient game state handling with React hooks
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+**Author**: Vinit Haridas Dharmraj  
+**Task**: CODSOFT AI Internship - Task 1

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Recommendation Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chart.js for Insights -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-brain"></i>
+                <span>SmartRec AI</span>
+            </div>
+            <ul class="nav-links">
+                <li class="active" onclick="switchTab('dashboard')">
+                    <i class="fa-solid fa-chart-line"></i> Dashboard
+                </li>
+                <li onclick="switchTab('recommendations')">
+                    <i class="fa-solid fa-list-check"></i> Recommendations
+                </li>
+                <li onclick="switchTab('insights')">
+                    <i class="fa-solid fa-chart-pie"></i> Insights
+                </li>
+            </ul>
+            <div class="user-stub">
+                <div class="avatar">VD</div>
+                <div class="user-info">
+                    <p class="name">Vinit D.</p>
+                    <p class="role">Admin</p>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <h1 id="page-title">Dashboard Overview</h1>
+                <div class="date-display" id="date-display"></div>
+            </header>
+
+            <!-- VIEW: DASHBOARD -->
+            <section id="view-dashboard" class="view-section active">
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="icon-box blue"><i class="fa-solid fa-users"></i></div>
+                        <div class="metric-info">
+                            <h3>Total Users</h3>
+                            <p id="stat-users">Loading...</p>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="icon-box purple"><i class="fa-solid fa-layer-group"></i></div>
+                        <div class="metric-info">
+                            <h3>Total Items</h3>
+                            <p id="stat-items">Loading...</p>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="icon-box green"><i class="fa-solid fa-check-double"></i></div>
+                        <div class="metric-info">
+                            <h3>Recs Generated</h3>
+                            <p id="stat-recs">Loading...</p>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="icon-box orange"><i class="fa-solid fa-percent"></i></div>
+                        <div class="metric-info">
+                            <h3>Avg Match</h3>
+                            <p id="stat-match">Loading...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="welcome-banner">
+                    <h2>Welcome back, Vinit!</h2>
+                    <p>Your AI recommendation engine is running smoothly. Check the Insights tab for detailed
+                        performance metrics.</p>
+                    <button class="cta-btn" onclick="switchTab('recommendations')">Generate New Recs</button>
+                </div>
+            </section>
+
+            <!-- VIEW: RECOMMENDATIONS -->
+            <section id="view-recommendations" class="view-section hidden">
+                <div class="rec-layout">
+                    <!-- Input Form -->
+                    <div class="card form-card">
+                        <h2><i class="fa-solid fa-sliders"></i> Preferences</h2>
+                        <form id="recommendationForm">
+                            <div class="form-group">
+                                <label>Category</label>
+                                <select id="category" name="category" required>
+                                    <option value="tech">Technology</option>
+                                    <option value="finance">Finance</option>
+                                    <option value="health">Health & Fitness</option>
+                                    <option value="education">Education</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Level</label>
+                                <select id="level" name="level" required>
+                                    <option value="beginner">Beginner</option>
+                                    <option value="intermediate">Intermediate</option>
+                                    <option value="advanced">Advanced</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Goal</label>
+                                <select id="goal" name="goal" required>
+                                    <option value="learning">Learning</option>
+                                    <option value="career">Career</option>
+                                    <option value="productivity">Productivity</option>
+                                    <option value="health">Health</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="generate-btn">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i> Generate
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Results -->
+                    <div class="results-area">
+                        <div id="results-placeholder" class="placeholder-state">
+                            <i class="fa-solid fa-robot"></i>
+                            <p>Select preferences and click Generate to see AI recommendations.</p>
+                        </div>
+                        <div id="results-list" class="results-grid hidden">
+                            <!-- Cards injected here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VIEW: INSIGHTS -->
+            <section id="view-insights" class="view-section hidden">
+                <div class="charts-grid">
+                    <div class="card chart-card">
+                        <h3>Category Distribution</h3>
+                        <canvas id="categoryChart"></canvas>
+                    </div>
+                    <div class="card chart-card">
+                        <h3>Accuracy Trend (7 Days)</h3>
+                        <canvas id="trendChart"></canvas>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
